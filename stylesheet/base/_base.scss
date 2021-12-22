@@ -1,0 +1,87 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body {
+  @include pxRem(font-size, 16);
+  font-family: $font-body;
+  position: relative;
+  font-weight: 300;
+  color: map-get($color, black);
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+  background-color: map-get($color, white);
+  overscroll-behavior: contain;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  // position: relative;
+  min-height: 100vh;
+}
+.auth-page {
+  min-height: 100vh;
+  background-color: map-get($map: $color, $key: white);
+}
+input {
+  font-family: $font-body;
+}
+textarea {
+  font-family: $font-body;
+}
+image {
+  max-width: 100%;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: map-get($map: $color, $key: black-a);
+}
+h1 {
+  font-size: map-get($map: $font-size, $key: xxxl);
+}
+h2 {
+  font-size: map-get($map: $font-size, $key: xxl);
+}
+h3 {
+  font-size: map-get($map: $font-size, $key: xl);
+}
+h4 {
+  font-size: map-get($map: $font-size, $key: lg);
+}
+h5 {
+  font-size: map-get($map: $font-size, $key: normal);
+}
+h6 {
+  font-size: map-get($map: $font-size, $key: sm);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}

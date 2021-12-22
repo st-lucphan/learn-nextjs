@@ -1,0 +1,158 @@
+.article-item {
+  @include pxRem(margin-bottom, 40);
+  position: relative;
+  .article-img {
+    display: block;
+    @include pxRem(height, 280);
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    object-fit: cover;
+  }
+  .dropdown {
+    @include pxRem(top, 10);
+    @include pxRem(right, 10);
+    position: absolute;
+    display: inline-block;
+    &:hover {
+      .sub-dropdown {
+        display: block;
+      }
+      .btn-dropdown {
+        opacity: 0.8;
+      }
+    }
+    .btn-dropdown {
+      background-color: transparent;
+      font-size: map-get($map: $font-size, $key: xl);
+    }
+    .sub-dropdown {
+      @include pxRem(min-width, 150);
+      @include pxRem(max-height, 100);
+      @include pxRem(right, -50);
+      @include pxRem(padding, 10 0);
+      display: none;
+      position: absolute;
+      top: 100%;
+      border-radius: 5px;
+      background-color: map-get($color, grey-a);
+      z-index: 1;
+      .sub-dropdown-item {
+        @include pxRem(min-height, 40);
+        @include pxRem(padding-left, 20);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        background: transparent;
+        color: map-get($color, black);
+        font-size: map-get($font-size, sm);
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+          color: map-get($color, primary);
+          background: map-get($color, grey-f);
+        }
+      }
+    }
+  }
+  .article-info {
+    display: flex;
+    align-items: center;
+    color: map-get($color, grey-b);
+    .author-img {
+      @include pxRem(width, 50);
+      @include pxRem(height, 50);
+      @include pxRem(margin-right, 8);
+      border-radius: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .author-info {
+      text-align: left;
+      .align-items-center {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .author-name {
+      @include pxRem(max-width, 120);
+      display: inline-block;
+      font-size: map-get($font-size, sm);
+      color: map-get($color, primary);
+    }
+  }
+  .article-body {
+    @include pxRem(height, 335);
+    letter-spacing: 0.2px;
+    .article-title {
+      @include pxRem(min-height, 56);
+      @include line-clamp(2);
+      text-align: left;
+      word-break: break-word;
+      font-size: map-get($font-size, xxl);
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: map-get($color, black);
+    }
+    .article-content {
+      @include pxRem(height, 80);
+      @include line-clamp(3);
+      color: map-get($color, grey-b);
+      font-size: map-get($font-size, normal);
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .read-more {
+      @include pxRem(padding, 4 0);
+      display: block;
+      text-align: left;
+      font-size: map-get($font-size, sm);
+      color: map-get($color, primary);
+    }
+    .article-tags {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      text-align: left;
+    }
+  }
+  .article-interact {
+    display: flex;
+    color: map-get($color, grey-b);
+    justify-content: space-between;
+    align-items: center;
+    .list-icon-interact {
+      display: flex;
+      .item-icon-item {
+        @include pxRem(margin, 0 15);
+        display: flex;
+        align-items: center;
+        font-size: map-get($font-size, normal);
+      }
+    }
+    .article-interact-item {
+      @include pxRem(margin, 0 15);
+      display: flex;
+      align-items: center;
+      font-size: map-get($font-size, normal);
+      &.btn-read-more {
+        @include pxRem(padding, 4 8);
+        background: map-get($color, white);
+        border: 1px solid map-get($color, grey-b);
+        color: map-get($color, grey-b);
+        font-size: map-get($font-size, xs);
+        font-weight: 600;
+        &:hover {
+          background: map-get($color, primary);
+          border: none;
+          color: map-get($color, white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page-container {
+  .container {
+    .page-title {
+      @include pxRem(margin-bottom, 45);
+      font-size: map-get($map: $font-size, $key: xxxl);
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .form-btn-group {
+    @include pxRem(margin-top, 40);
+    justify-content: center;
+  }
+}

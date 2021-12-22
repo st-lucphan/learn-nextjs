@@ -1,0 +1,19 @@
+.button-google-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #d8dfee;
+  cursor: pointer;
+  .button-title {
+    font-weight: bolder;
+    color: map-get($map: $color, $key: black-a);
+  }
+  .icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}

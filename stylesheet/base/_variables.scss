@@ -1,0 +1,60 @@
+// == Breakpoints ===
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px,
+  super-largest: 1441px,
+);
+
+$color: (
+  primary: #0f730c,
+  secondary: #8d8d8d,
+  blue: #007bff,
+  orange-a: #a17143,
+  grey-a: #f3f3f3,
+  grey-b: rgba(0, 0, 0, 0.54),
+  grey-c: #5e5e62,
+  grey-d: #fafafa,
+  grey-e: #d3d3d3,
+  grey-f: #e8e8e8,
+  grey-g: #6c757d,
+  black: #292929,
+  black-a: #161616,
+  white: #ffffff,
+  white-a: #e4e4e4,
+  warning: #ff8700,
+  violet: #b97ebb,
+  blue-a: #007bff,
+  blue-b: #496e96,
+  info: #17a2b8,
+  fb: #3b5998,
+  twitter: #00aced,
+  linkedin: #007bb6,
+  dribbble: #ea4c89,
+  success: #d4edda,
+  danger: #dc3545,
+  danger-a: #f0949c,
+  red: #dc3545,
+  red-a: #721c24,
+  green: #28a745,
+  green-a: #155724,
+  green-b: #c3e6cb,
+  pink: #e99695,
+  tag: #c69f6d,
+);
+
+$font-size: (
+  xxs: 10px,
+  xs: 11px,
+  sm: 14px,
+  normal: 16px,
+  lg: 18px,
+  xl: 20px,
+  xxl: 22px,
+  xxxl: 25px,
+);
+$col-max: 12;
+$font-body: Roboto, sans-serif;
+$font-japan: serif;
